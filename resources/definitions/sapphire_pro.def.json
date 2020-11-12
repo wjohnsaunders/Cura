@@ -1,0 +1,29 @@
+{
+    "name": "TwoTrees Sapphire Pro",
+    "version": 2,
+    "inherits": "sapphire_base",
+    "metadata": {
+        "visible": true,
+        "platform": "sapphire_pro.stl",
+        "platform_offset": [
+            -100,
+            0,
+            100
+          ]
+    },
+    "overrides":
+    {
+        "machine_name": {
+            "default_value": "TwoTrees Sapphire Pro"
+        },
+        "machine_width": {
+            "default_value": 220
+        },
+        "machine_depth": {
+            "default_value": 220
+        },
+        "machine_height": {
+            "default_value": 220
+        }
+    }
+}

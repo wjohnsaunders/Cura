@@ -1,0 +1,33 @@
+{
+    "name": "TwoTrees Sapphire S",
+    "version": 2,    
+    "inherits": "sapphire_base",
+    "metadata": {
+        "visible": true,
+        "platform": "sapphire_s.stl",
+        "platform_offset": [
+            -100,
+            0,
+            100
+          ]
+    },
+    "overrides":
+    {
+        "machine_name": {
+            "default_value": "TwoTrees Sapphire S"
+        },
+        "machine_width": {
+            "default_value": 200
+        },
+        "machine_depth": {                    
+            "default_value": 200
+        },
+        "machine_height": {
+            "default_value": 200                 
+        },
+        "retraction_speed":
+        {
+            "default_value": 45
+        }
+    }
+}
