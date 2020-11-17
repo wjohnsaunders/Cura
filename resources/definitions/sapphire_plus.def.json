@@ -3,21 +3,23 @@
     "version": 2,
     "inherits": "sapphire_base",
     "metadata": {
-        "visible": true
+        "quality_definition": "sapphire_base",
+        "visible": true,
+        "author": "John Saunders"
     },
-    "overrides":
-    {
-        "machine_name": {
-            "default_value": "TwoTrees Sapphire Plus"
+    "overrides": {
+        "machine_name": { "default_value": "TwoTrees Sapphire Plus" },
+        "machine_width": { "default_value": 300 },
+        "machine_depth": { "default_value": 300 },
+        "machine_height": { "default_value": 340 },
+        "machine_head_with_fans_polygon": { "default_value": [
+                [-35, 35],
+                [-35, -30],
+                [35, -30],
+                [35, 35]
+            ]
         },
-        "machine_width": {
-            "default_value": 300
-        },
-        "machine_depth": {
-            "default_value": 300
-        },
-        "machine_height": {
-            "default_value": 340
-        }
+        "gantry_height": { "value": 50 },
+        "retraction_speed": { "default_value": 45 }
     }
 }

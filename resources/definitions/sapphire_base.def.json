@@ -4,7 +4,7 @@
     "inherits": "fdmprinter",
     "metadata": {
         "visible": false,
-        "author": "john@saunders.id.au",
+        "author": "John Saunders",
         "manufacturer": "TwoTrees",
         "file_formats": "text/x-gcode",
         "first_start_actions": ["MachineSettingsAction"],
@@ -13,137 +13,23 @@
             "0": "sapphire_base_extruder_0"
         },
 
-        "has_machine_quality": false,
-        "preferred_quality_type": "Draft",
-
-        "has_variants": true,
-        "variants_name": "Nozzle Size",
-        "preferred_variant_name": "0.4mm Nozzle",
-
         "has_materials": true,
-        "preferred_material": "generic_pla",
-        "exclude_materials": [
-            "Vertex_Delta_ABS",
-            "Vertex_Delta_PET",
-            "Vertex_Delta_PLA",
-            "Vertex_Delta_TPU",
-            "chromatik_pla",
-            "dsm_arnitel2045_175",
-            "dsm_novamid1070_175",
-            "fabtotum_abs",
-            "fabtotum_nylon",
-            "fabtotum_pla",
-            "fabtotum_tpu",
-            "fiberlogy_hd_pla",
-            "filo3d_pla",
-            "filo3d_pla_green",
-            "filo3d_pla_red",
-            "generic_abs",
-            "generic_bam",
-            "generic_cffcpe",
-            "generic_cffpa",
-            "generic_cpe",
-            "generic_cpe_plus",
-            "generic_gffcpe",
-            "generic_gffpa",
-            "generic_hips",
-            "generic_nylon",
-            "generic_pc",
-            "generic_petg",
-            "generic_pla",
-            "generic_pp",
-            "generic_pva",
-            "generic_tough_pla",
-            "generic_tpu",
-            "imade3d_petg_green",
-            "imade3d_petg_pink",
-            "imade3d_pla_green",
-            "imade3d_pla_pink",
-            "innofill_innoflex60_175",
-            "octofiber_pla",
-            "polyflex_pla",
-            "polymax_pla",
-            "polyplus_pla",
-            "polywood_pla",
-            "structur3d_dap100silicone",
-            "tizyx_abs",
-            "tizyx_pla",
-            "tizyx_pla_bois",
-            "ultimaker_abs_black",
-            "ultimaker_abs_blue",
-            "ultimaker_abs_green",
-            "ultimaker_abs_grey",
-            "ultimaker_abs_orange",
-            "ultimaker_abs_pearl-gold",
-            "ultimaker_abs_red",
-            "ultimaker_abs_silver-metallic",
-            "ultimaker_abs_white",
-            "ultimaker_abs_yellow",
-            "ultimaker_bam",
-            "ultimaker_cpe_black",
-            "ultimaker_cpe_blue",
-            "ultimaker_cpe_dark-grey",
-            "ultimaker_cpe_green",
-            "ultimaker_cpe_light-grey",
-            "ultimaker_cpe_plus_black",
-            "ultimaker_cpe_plus_transparent",
-            "ultimaker_cpe_plus_white",
-            "ultimaker_cpe_red",
-            "ultimaker_cpe_transparent",
-            "ultimaker_cpe_white",
-            "ultimaker_cpe_yellow",
-            "ultimaker_nylon_black",
-            "ultimaker_nylon_transparent",
-            "ultimaker_pc_black",
-            "ultimaker_pc_transparent",
-            "ultimaker_pc_white",
-            "ultimaker_pla_black",
-            "ultimaker_pla_blue",
-            "ultimaker_pla_green",
-            "ultimaker_pla_magenta",
-            "ultimaker_pla_orange",
-            "ultimaker_pla_pearl-white",
-            "ultimaker_pla_red",
-            "ultimaker_pla_silver-metallic",
-            "ultimaker_pla_transparent",
-            "ultimaker_pla_white",
-            "ultimaker_pla_yellow",
-            "ultimaker_pp_transparent",
-            "ultimaker_pva",
-            "ultimaker_tough_pla_black",
-            "ultimaker_tough_pla_green",
-            "ultimaker_tough_pla_red",
-            "ultimaker_tough_pla_white",
-            "ultimaker_tpu_black",
-            "ultimaker_tpu_blue",
-            "ultimaker_tpu_red",
-            "ultimaker_tpu_white",
-            "verbatim_bvoh_175",
-            "zyyx_pro_flex",
-            "zyyx_pro_pla"
-        ]
+        "has_variants": true,
+        "has_machine_quality": true,
+        "variants_name": "Nozzle Size",
+
+        "preferred_variant_name": "0.4mm Nozzle",
+        "preferred_quality_type": "normal",
+        "preferred_material": "generic_pla"
     },
     "overrides": {
         "machine_name": { "default_value": "Sapphire Base Printer" },
-
-        "machine_head_with_fans_polygon": {
-            "default_value": [
-                [-35, 35],
-                [-35, -30],
-                [35, -30],
-                [35, 35]
-            ]
-        },
-        "gantry_height": {
-            "value": 50
-        },
-
         "machine_start_gcode": { "default_value": "; Sapphire Start G-code\nG92 E0 ; Reset Extruder\nG28 ; Home all axes\nG1 Z5.0 F3000 ; Move Z Axis up little to prevent scratching Heat Bed\n" },
         "machine_end_gcode": { "default_value": "G91 ;Relative positioning\nG1 E-4.5 F2700 ;Retract a bit\nG1 E-2 Z0.2 F2400 ;Retract and raise Z\nG1 X5 Y5 F3000 ;Wipe out\nG1 Z10 ;Raise Z more\nG90 ;Absolute positionning\n\nG1 X0 Y{machine_depth} ;Present print\nM106 S0 ;Turn-off fan\nM104 S0 ;Turn-off hotend\nM140 S0 ;Turn-off bed\n\nM84 X Y E ;Disable all steppers but Z\n" },
 
         "machine_max_feedrate_x": { "value": 200 },
         "machine_max_feedrate_y": { "value": 200 },
-        "machine_max_feedrate_z": { "value": 8 },
+        "machine_max_feedrate_z": { "value": 10 },
         "machine_max_feedrate_e": { "value": 70 },
 
         "machine_max_acceleration_x": { "value": 1000 },
@@ -152,7 +38,7 @@
         "machine_max_acceleration_e": { "value": 800 },
         "machine_acceleration": { "value": 1000 },
 
-        "machine_max_jerk_xy": { "value": 15 },
+        "machine_max_jerk_xy": { "value": 20 },
         "machine_max_jerk_z": { "value": 0.4 },
         "machine_max_jerk_e": { "value": 5 },
 
@@ -160,15 +46,12 @@
 
         "material_diameter": { "default_value": 1.75 },
 
-        "acceleration_print": { "value": 1000 },
-        "acceleration_travel": {
-            "default_value": 2000,
-            "value": "acceleration_print if magic_spiralize else 2000"
-        },
+        "acceleration_print": { "value": "machine_acceleration" },
+        "acceleration_travel": { "value": "machine_acceleration" },
         "acceleration_travel_layer_0": { "value": "acceleration_travel" },
         "acceleration_roofing": { "enabled": "acceleration_enabled and roofing_layer_count > 0 and top_layers > 0" },
 
-        "jerk_print": { "value": 8 },
+        "jerk_print": { "value": 20 },
         "jerk_travel": { "value": "jerk_print" },
         "jerk_travel_layer_0": { "value": "jerk_travel" },
 
@@ -183,7 +66,7 @@
         "speed_topbottom": { "value": "speed_print / 2" },
         "speed_roofing": { "value": "speed_topbottom" },
         "speed_travel": { "value": "150.0 if speed_print < 60 else 250.0 if speed_print > 100 else speed_print * 2.5" },
-        "speed_layer_0": { "value": 25.0 },
+        "speed_layer_0": { "value": 30.0 },
         "speed_print_layer_0": { "value": "speed_layer_0" },
         "speed_travel_layer_0": { "value": "100 if speed_layer_0 < 20 else 150 if speed_layer_0 > 30 else speed_layer_0 * 5" },
         "speed_prime_tower": { "value": "speed_topbottom" },
@@ -218,15 +101,15 @@
         "filter_out_tiny_gaps": { "value": false },
 
         "retraction_speed": {
-            "maximum_value_warning": "machine_max_feedrate_e if retraction_enable else float('inf')",
+            "maximum_value_warning": "machine_max_feedrate_e",
             "maximum_value": 200
         },
         "retraction_retract_speed": {
-            "maximum_value_warning": "machine_max_feedrate_e if retraction_enable else float('inf')",
+            "maximum_value_warning": "machine_max_feedrate_e",
             "maximum_value": 200
         },
         "retraction_prime_speed": {
-            "maximum_value_warning": "machine_max_feedrate_e if retraction_enable else float('inf')",
+            "maximum_value_warning": "machine_max_feedrate_e",
             "maximum_value": 200
         },
         
@@ -250,7 +133,7 @@
         "adhesion_type": { "value": "'skirt'" },
         "brim_replaces_support": { "value": false },
         "skirt_gap": { "value": 3.0 },
-        "skirt_line_count": { "value": 4 },
+        "skirt_line_count": { "value": 5 },
 
         "adaptive_layer_height_variation": { "value": 0.04 },
         "adaptive_layer_height_variation_step": { "value": 0.04 },

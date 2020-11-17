@@ -1,9 +1,11 @@
 {
     "name": "TwoTrees Sapphire S",
-    "version": 2,    
+    "version": 2,
     "inherits": "sapphire_base",
     "metadata": {
+        "quality_definition": "sapphire_base",
         "visible": true,
+        "author": "John Saunders",
         "platform": "sapphire_s.stl",
         "platform_offset": [
             -100,
@@ -11,23 +13,19 @@
             100
           ]
     },
-    "overrides":
-    {
-        "machine_name": {
-            "default_value": "TwoTrees Sapphire S"
+    "overrides": {
+        "machine_name": { "default_value": "TwoTrees Sapphire S" },
+        "machine_width": { "default_value": 200 },
+        "machine_depth": { "default_value": 200 },
+        "machine_height": { "default_value": 200 },
+        "machine_head_with_fans_polygon": { "default_value": [
+                [-35, 35],
+                [-35, -30],
+                [35, -30],
+                [35, 35]
+            ]
         },
-        "machine_width": {
-            "default_value": 200
-        },
-        "machine_depth": {                    
-            "default_value": 200
-        },
-        "machine_height": {
-            "default_value": 200                 
-        },
-        "retraction_speed":
-        {
-            "default_value": 45
-        }
+        "gantry_height": { "value": 50 },
+        "retraction_speed": { "default_value": 45 }
     }
 }
