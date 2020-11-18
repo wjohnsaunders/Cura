@@ -5,19 +5,14 @@
     "metadata": {
         "quality_definition": "sapphire_base",
         "visible": true,
-        "author": "John Saunders",
-        "platform": "sapphire_pro.stl",
-        "platform_offset": [
-            -100,
-            0,
-            100
-          ]
+        "author": "john@saunders.id.au",
+        "platform": "sapphire_pro.stl"
     },
     "overrides": {
         "machine_name": { "default_value": "TwoTrees Sapphire Pro" },
-        "machine_width": { "default_value": 220 },
-        "machine_depth": { "default_value": 220 },
-        "machine_height": { "default_value": 220 },
+        "machine_width": { "default_value": 235 },
+        "machine_depth": { "default_value": 235 },
+        "machine_height": { "default_value": 235 },
         "machine_head_with_fans_polygon": { "default_value": [
                 [-35, 35],
                 [-35, -30],
@@ -25,7 +20,6 @@
                 [35, 35]
             ]
         },
-        "gantry_height": { "value": 50 },
-        "retraction_speed": { "default_value": 45 }
+        "gantry_height": { "value": 50 }
     }
 }
